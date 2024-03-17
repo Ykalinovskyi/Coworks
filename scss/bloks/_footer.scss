@@ -1,0 +1,16 @@
+.footer {
+    padding: 60px 0;
+    background-color: #000000;
+    color: #ffffff;
+
+    a {
+        color: #ffffff;
+    }
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
