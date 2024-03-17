@@ -1,0 +1,20 @@
+.nav {
+    font-size: 14px;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.nav__item {}
+
+.nav__link {
+    color: #000000;
+    transition: color .2s ease-in;
+
+    &:hover {
+        color: #00ae6c;
+    }
+}

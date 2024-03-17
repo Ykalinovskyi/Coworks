@@ -1,0 +1,17 @@
+.button-dark, a.button-dark {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 80px;
+
+    background-color: #000000;
+    
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+
+    transition:  background-color 0.3s ease-in;
+    
+    &:hover {
+        background-color: #333333;
+    }
+}
