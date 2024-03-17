@@ -97,6 +97,7 @@ body {
   font-size: 16px;
   letter-spacing: 0.3px;
   color: #000000;
+  padding-bottom: 600px;
 }
 
 a {
@@ -129,6 +130,13 @@ button:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 120px;
+}
+
+.title-section {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #000000;
 }
 
 .header {
@@ -391,4 +399,47 @@ button:focus {
   font-size: 24px;
   line-height: 1;
   color: #000000;
+}
+
+.locations__row {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.location__title {
+  max-width: 430px;
+}
+
+.location__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  overflow: hidden;
+}
+
+.slider__img {
+  border-radius: 8px;
 }/*# sourceMappingURL=main.css.map */
