@@ -32,12 +32,12 @@ button:focus {
         width: 100%;
     }
 
-    @media (max-width: 1220px) { //с учетом полоски скрола в 20px
-        width: 768px; // с учетом падингов
+    @include tablet {
+        width: 768px; //с учетом падингов
     }
 
-    @media (max-width: 788px) {
-        width: 360px;
+    @include mobile {
+        width: 360px; //с учетом падингов
     }
 }
 
