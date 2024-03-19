@@ -119,6 +119,16 @@ button:focus {
   max-width: 1510px;
   width: 100%;
 }
+@media (max-width: 1220px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 788px) {
+  .container {
+    width: 360px;
+  }
+}
 
 .main {
   display: -webkit-box;
@@ -137,6 +147,10 @@ button:focus {
   font-size: 42px;
   line-height: 1.2;
   color: #000000;
+}
+
+.none {
+  display: none !important;
 }
 
 .header {

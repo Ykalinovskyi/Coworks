@@ -31,6 +31,14 @@ button:focus {
         max-width: 1510px;
         width: 100%;
     }
+
+    @media (max-width: 1220px) { //с учетом полоски скрола в 20px
+        width: 768px; // с учетом падингов
+    }
+
+    @media (max-width: 788px) {
+        width: 360px;
+    }
 }
 
 .main {
@@ -45,4 +53,8 @@ button:focus {
     font-size: 42px;
     line-height: 1.2;
     color: #000000;
+}
+
+.none {
+    display: none !important;
 }
