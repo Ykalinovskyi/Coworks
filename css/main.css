@@ -129,6 +129,11 @@ button:focus {
     width: 360px;
   }
 }
+@media (max-width: 788px) {
+  .container--mobile-fluid {
+    width: auto;
+  }
+}
 
 .main {
   display: -webkit-box;
@@ -151,6 +156,12 @@ button:focus {
 
 .none {
   display: none !important;
+}
+
+@media (max-width: 1220px) {
+  .visible-desktop {
+    display: none;
+  }
 }
 
 .header {
@@ -177,6 +188,21 @@ button:focus {
       flex-shrink: 0;
 }
 
+@media (max-width: 788px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav-btn {
+  display: none;
+}
+@media (max-width: 788px) {
+  .header__nav-btn {
+    display: block;
+  }
+}
+
 .nav {
   font-size: 14px;
 }
@@ -191,6 +217,13 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 1220px) {
+  .nav__list {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
 }
 
 .nav__link {

@@ -39,6 +39,12 @@ button:focus {
     @include mobile {
         width: 360px; //с учетом падингов
     }
+
+    &--mobile-fluid {
+        @include mobile {
+            width: auto;
+        }
+    }
 }
 
 .main {
@@ -57,4 +63,10 @@ button:focus {
 
 .none {
     display: none !important;
+}
+
+.visible-desktop {
+    @include tablet {
+        display: none;
+    }
 }
