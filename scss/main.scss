@@ -2,8 +2,10 @@
 @import "./base/reset";
 @import "./base/mixins";
 @import "./base/base";
+@import "./base/container";
 
 // Blocks
+@import "./bloks/main";
 @import "./bloks/header";
 @import "./bloks/nav";
 @import "./bloks/buttons";

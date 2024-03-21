@@ -5,6 +5,10 @@
 .services__title {
     margin-bottom: 40px;
     max-width: 570px;
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
 }
 
 .services__list {
@@ -13,8 +17,16 @@
     flex-wrap: wrap;
     align-items:  flex-start;
     justify-content: flex-start;
+
+    @include mobile {
+        gap: 20px;  
+    } 
 }
 
 .services__list-item {
     max-width: 270px;
+
+    @include tablet {
+        max-width: 354px;
+    }
 }

@@ -5,15 +5,32 @@
 .faq__row {
     display: flex;
     column-gap: 30px;
+    row-gap: 40px;
     justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        row-gap: 20px;
+    }
 }
 
 .faq__title {
     width: 470px;
     flex-shrink: 0;
+
+    @include tablet {
+        min-width: auto;
+    }
 }
 
 .faq__topics {
     width: 670px;
     flex-shrink: 0;
+
+    @include tablet {
+        width: auto;
+    }
 }

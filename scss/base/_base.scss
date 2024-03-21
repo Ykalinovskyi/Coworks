@@ -22,47 +22,19 @@ button:focus {
     outline: #005fcc auto 1px;
 }
 
-.container {
-    width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-
-    @include tablet {
-        width: 768px; //с учетом падингов
-    }
-
-    @include mobile {
-        width: 360px; //с учетом падингов
-    }
-
-    &--large {
-        max-width: 1510px;
-        width: 100%;
-
-        @include tablet {
-            width: 100%;
-        }
-    }
-
-    &--mobile-fluid {
-        @include mobile {
-            width: auto;
-        }
-    }
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    row-gap: 120px;
-    margin-bottom: 120px;
-}
-
 .title-section {
     font-weight: 800;
     font-size: 42px;
     line-height: 1.2;
     color: #000000;
+
+    @include tablet {
+        font-size: 32px;
+    }
+
+    @include mobile {
+       font-size: 24px; 
+    }
 }
 
 .none {

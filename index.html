@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=360, initial-scale=1, shrink-to-fit=no">
     <title>CoWorks - Коворкинг мечты</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
@@ -108,31 +109,42 @@
             </div>
         </section>
 
-        <section class="location none">
+        <section class="location">
             <div class="container">
                 <div class="locations__row">
                     <div class="location__title">
                         <h2 class="title-section">Локации и рабочие пространства</h2>
                     </div>
-                    
                     <div class="location__controls">
                         <button type="button">
-                            <img src="./img/icons/arrow-left.svg" alt="prew">
+                            <img class="location__controls-img" src="./img/icons/arrow-left.svg" alt="prew">
                         </button>
                         <button type="button">
-                            <img src="./img/icons/arrow-right.svg" alt="next">
+                            <img class="location__controls-img" src="./img/icons/arrow-right.svg" alt="next">
                         </button>
                     </div>
                 </div>
+            </div>
+            <div class="container container--mobile-fluid">
                 <div class="slider">
                     <img class="slider__img" src="./img/slider/slide-01.jpg" srcset="./img/slider/slide-01@2x.jpg 2x" alt="Слайд 1">
                     <img class="slider__img" src="./img/slider/slide-02.jpg" srcset="./img/slider/slide-02@2x.jpg 2x" alt="Слайд 2">
                     <img class="slider__img" src="./img/slider/slide-03.jpg" srcset="./img/slider/slide-03@2x.jpg 2x" alt="Слайд 3">
                 </div>
+            </div>    
+            <div class="container">    
+                <div class="location__controls location__controls--mobile">
+                    <button type="button">
+                        <img class="location__controls-img" src="./img/icons/arrow-left.svg" alt="prew">
+                    </button>
+                    <button type="button">
+                        <img class="location__controls-img" src="./img/icons/arrow-right.svg" alt="next">
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section class="services none">
+        <section class="services">
             <div class="container">
                 <div class="services__title">
                     <h2 class="title-section">Сервисы</h2>
@@ -182,7 +194,7 @@
             </div>
         </section>
 
-        <section class="price none">
+        <section class="price">
             <div class="container">
                 <div class="price__title">
                     <h2 class="title-section">Тарифы</h2>
@@ -255,7 +267,7 @@
             </div>
         </section>
 
-        <section class="cta none">
+        <section class="cta">
             <div class="container">
                 <div class="cta__wrapper">
                     <div class="cta__content">
@@ -279,7 +291,7 @@
             </div>
         </section>
 
-        <section class="map none">
+        <section class="map">
             <div class="container">
                 <div class="map__title">
                     <h2 class="title-section">Расположение</h2>
@@ -291,7 +303,7 @@
             </div>
         </section>
 
-        <section class="faq none">
+        <section class="faq">
             <div class="container">
                 <div class="faq__row">
                     <div class="faq__title">
@@ -348,7 +360,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
             <div class="footer__col">
                 <div class="footer__logo">
