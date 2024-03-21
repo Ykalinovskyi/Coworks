@@ -115,10 +115,6 @@ button:focus {
   padding: 0 15px;
   margin: 0 auto;
 }
-.container--large {
-  max-width: 1510px;
-  width: 100%;
-}
 @media (max-width: 1220px) {
   .container {
     width: 768px;
@@ -127,6 +123,15 @@ button:focus {
 @media (max-width: 788px) {
   .container {
     width: 360px;
+  }
+}
+.container--large {
+  max-width: 1510px;
+  width: 100%;
+}
+@media (max-width: 1220px) {
+  .container--large {
+    width: 100%;
   }
 }
 @media (max-width: 788px) {
@@ -364,6 +369,33 @@ button:focus {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./../img/promo/promo-bg@2x.jpg");
   }
 }
+@media (max-width: 1220px) {
+  .promo__wrapper {
+    height: 434px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./../img/promo/promo-bg-tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./../img/promo/promo-bg-tablet.jpg");
+  }
+}
+@media (max-width: 1220px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1220px) and (min-resolution: 192dpi) {
+  .promo__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./../img/promo/promo-bg-tablet@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./../img/promo/promo-bg-tablet@2x.jpg");
+  }
+}
+@media (max-width: 788px) {
+  .promo__wrapper {
+    height: auto;
+    padding: 59px 15px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./../img/promo/promo-bg-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./../img/promo/promo-bg-mobile.jpg");
+  }
+}
+@media (max-width: 788px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 788px) and (min-resolution: 192dpi) {
+  .promo__wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./../img/promo/promo-bg-mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./../img/promo/promo-bg-mobile@2x.jpg");
+  }
+}
 
 .promo__content {
   max-width: 678px;
@@ -379,11 +411,32 @@ button:focus {
           align-items: center;
   row-gap: 40px;
 }
+@media (max-width: 1220px) {
+  .promo__content {
+    row-gap: 30px;
+  }
+}
+@media (max-width: 788px) {
+  .promo__content {
+    max-width: 330px;
+    row-gap: 20px;
+  }
+}
 
 .promo__title {
   font-weight: 800;
   font-size: 72px;
   line-height: 1;
+}
+@media (max-width: 1220px) {
+  .promo__title {
+    font-size: 52px;
+  }
+}
+@media (max-width: 788px) {
+  .promo__title {
+    font-size: 32px;
+  }
 }
 
 .promo__text {
@@ -398,17 +451,25 @@ button:focus {
           flex-direction: column;
   row-gap: 0.5em;
 }
+@media (max-width: 1220px) {
+  .promo__text {
+    font-size: 16px;
+  }
+}
 
 .promo__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .benefits__row {

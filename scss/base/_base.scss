@@ -27,17 +27,21 @@ button:focus {
     padding: 0 15px;
     margin: 0 auto;
 
-    &--large {
-        max-width: 1510px;
-        width: 100%;
-    }
-
     @include tablet {
         width: 768px; //с учетом падингов
     }
 
     @include mobile {
         width: 360px; //с учетом падингов
+    }
+
+    &--large {
+        max-width: 1510px;
+        width: 100%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &--mobile-fluid {
