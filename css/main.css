@@ -652,11 +652,11 @@ button:focus {
   }
 }
 
-.location__title {
+.locations__title {
   max-width: 430px;
 }
 
-.location__controls {
+.locations__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,29 +665,29 @@ button:focus {
           column-gap: 20px;
 }
 @media (max-width: 1220px) {
-  .location__controls {
+  .locations__controls {
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
   }
 }
 @media (max-width: 788px) {
-  .location__controls {
+  .locations__controls {
     display: none;
   }
 }
-.location__controls--mobile {
+.locations__controls--mobile {
   display: none;
   margin-top: 20px;
 }
 @media (max-width: 788px) {
-  .location__controls--mobile {
+  .locations__controls--mobile {
     display: block;
   }
 }
 
 @media (max-width: 1220px) {
-  .location__controls-img {
+  .locations__controls-img {
     width: 42px;
     height: 42px;
   }
@@ -1112,7 +1112,7 @@ button:focus {
 }
 @media (max-width: 1220px) {
   .faq__title {
-    min-width: auto;
+    width: auto;
   }
 }
 

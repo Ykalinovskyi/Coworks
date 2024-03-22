@@ -1,4 +1,4 @@
-.location {}
+.locations {}
 
 .locations__row {
     margin-bottom: 40px;
@@ -12,11 +12,11 @@
     }
 }
 
-.location__title {
+.locations__title {
     max-width: 430px;
 }
 
-.location__controls {
+.locations__controls {
     display: flex;
     column-gap: 20px;
 
@@ -38,7 +38,7 @@
     }
 }
 
-.location__controls-img {
+.locations__controls-img {
     @include tablet {
         width: 42px;
         height: 42px;

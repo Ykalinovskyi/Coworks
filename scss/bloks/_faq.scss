@@ -22,7 +22,7 @@
     flex-shrink: 0;
 
     @include tablet {
-        min-width: auto;
+        width: auto;
     }
 }
 
