@@ -2,6 +2,17 @@
     display: flex;
     column-gap: 10px;
     overflow: hidden;
+
+    img {
+        max-width: unset;
+    }
+}
+
+// #tns1-item0 {
+//     padding-left: 15px;
+// }
+.slider > div:first-child {
+    padding-left: 15px;
 }
 
 .slider__img {

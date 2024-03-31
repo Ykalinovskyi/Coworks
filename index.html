@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=360, initial-scale=1, shrink-to-fit=no">
     <title>CoWorks - Коворкинг мечты</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/tiny-slider/tiny-slider.css">
     <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="top">
         <div class="container container--mobile-fluid">
             <div class="header__row">
                 <a href="#!" class="header__logo logo">
@@ -19,29 +20,51 @@
                 <nav class="header__nav nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#!" class="nav__link">Локация</a>
+                            <a href="#location" class="nav__link">Локация</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#!" class="nav__link">Сервис</a>
+                            <a href="#services" class="nav__link">Сервис</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#!" class="nav__link">Тарифы</a>
+                            <a href="#price" class="nav__link">Тарифы</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#!" class="nav__link">Расположение</a>
+                            <a href="#map" class="nav__link">Расположение</a>
                         </li>
-                        <li class="nav__item visible-desktop">
+                        <li class="nav__item visible-desktop" data-action="modal">
                             <button class="button-dark" type="button">Оставить заявку</button>
                         </li>
                     </ul>
                 </nav>
 
-                <button class="header__nav-btn" type="button">
+                <button class="header__nav-btn" type="button" id="openMobileNav">
                     <img src="./img/icons/nav-btn-open.svg" alt="Кнопка меню">
                 </button>
             </div>
         </div>
     </header>
+
+    <section class="mobile-nav">
+        <h2 class="visually-hidden">мобильная новигация</h2>
+        <div class="mobile-nav__header">
+            <a href="#!" class="mobile-nav__logo logo">
+                <img src="./img/logo/header-logo.svg" alt="Логотип">
+            </a>
+            <button class="mobile-nav__btn" id="closeMobileNav">
+                <img src="./img/icons/nav-btn-close.svg" alt="кнопка закрыть">
+            </button>
+        </div>
+        <div class="mobile-nav__body">
+            <ul class="mobile-nav__list">
+                <li><a href="#location">Локация</a></li>
+                <li><a href="#services">Сервис</a></li>
+                <li><a href="#price">Тарифы</a></li>
+                <li><a href="#map">Расположение</a></li>
+                <li><button class="button-dark" type="button">Оставить заявку</button></li>
+            </ul>
+        </div>
+    </section>
+
     <main class="main">
         <section class="promo">
             <div class="container container--large">
@@ -54,15 +77,15 @@
                             <p>Лучший коворкинг для  фрилансеров и IT специалистов в центре города</p>
                         </div>
                         <div class="promo__buttons">
-                            <button class="button-green" type="button">Оставить заявку</button>
-                            <a class="button-outline" href="#!">Исследовать</a>
+                            <button class="button-green" type="button" data-action="modal">Оставить заявку</button>
+                            <a class="button-outline" href="#benefits">Исследовать</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="benefits">
+        <section class="benefits" id="benefits">
             <div class="container">
                 <div class="benefits__row">
                     <div class="benefits__img">
@@ -80,7 +103,7 @@
                                     <img class="benefit__img" src="./img/benefits/clock.svg" alt="Картинка часов">
                                     <div class="benefit__desc">
                                         <h3 class="benefit__title">Открыты 24 часа</h3>
-                                        <p>Наш коворкинг открыт 24/7, гарантируя вам<br>свободу творчества в удобное для вас время.</p>
+                                        <p>Наш коворкинг открыт 24/7, гарантируя вам свободу творчества в удобное для вас время.</p>
                                     </div>
                                 </div>
 
@@ -90,7 +113,7 @@
                                     <img class="benefit__img" src="./img/benefits/snack.svg" alt="Картинка еды">
                                     <div class="benefit__desc">
                                         <h3 class="benefit__title">Бесплатные снэки и напитки</h3>
-                                        <p>Энергия на максимум. Наслаждайтесь бесплатными<br>снэками и напитками, чтобы зарядиться  в любой момент.</p>
+                                        <p>Энергия на максимум. Наслаждайтесь бесплатными снэками и напитками, чтобы зарядиться  в любой момент.</p>
                                     </div>
                                 </div>
                             </li>
@@ -99,7 +122,7 @@
                                     <img class="benefit__img" src="./img/benefits/game.svg " alt="Картинка геймпада">
                                     <div class="benefit__desc">
                                         <h3 class="benefit__title">Игровая зона отдыха</h3>
-                                        <p>Наша игровая зона доступна для вас. Идеальное<br>место для перерывов и вдохновения в любое время.</p>
+                                        <p>Наша игровая зона доступна для вас. Идеальное место для перерывов и вдохновения в любое время.</p>
                                     </div>
                                 </div>
                             </li>
@@ -109,42 +132,48 @@
             </div>
         </section>
 
-        <section class="locations">
+        <section class="locations" id="location">
             <div class="container">
                 <div class="locations__row">
                     <div class="locations__title">
                         <h2 class="title-section">Локации и рабочие пространства</h2>
                     </div>
                     <div class="locations__controls">
-                        <button type="button">
+                        <button type="button" class="prev">
                             <img class="locations__controls-img" src="./img/icons/arrow-left.svg" alt="prew">
                         </button>
-                        <button type="button">
+                        <button type="button" class="next">
                             <img class="locations__controls-img" src="./img/icons/arrow-right.svg" alt="next">
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="container container--mobile-fluid">
+            <div class="container container--table-fluid container--mobile-no-padding">
                 <div class="slider">
-                    <img class="slider__img" src="./img/slider/slide-01.jpg" srcset="./img/slider/slide-01@2x.jpg 2x" alt="Слайд 1">
-                    <img class="slider__img" src="./img/slider/slide-02.jpg" srcset="./img/slider/slide-02@2x.jpg 2x" alt="Слайд 2">
-                    <img class="slider__img" src="./img/slider/slide-03.jpg" srcset="./img/slider/slide-03@2x.jpg 2x" alt="Слайд 3">
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-01.jpg" data-srcset="./img/slider/slide-01@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="525" alt="Слайд 1"></div>
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-02.jpg" data-srcset="./img/slider/slide-02@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" alt="Слайд 2"></div>
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-03.jpg" data-srcset="./img/slider/slide-03@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="435" alt="Слайд 3"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-04.jpg" data-srcset="./img/slider/slide-04@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" alt="Слайд 4"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-05.jpg" data-srcset="./img/slider/slide-05@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" alt="Слайд 5"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-06.jpg" data-srcset="./img/slider/slide-06@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" alt="Слайд 6"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-07.jpg" data-srcset="./img/slider/slide-07@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="525" alt="Слайд 7"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-08.jpg" data-srcset="./img/slider/slide-08@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="525" alt="Слайд 8"></div>    
+                    <div><img class="slider__img tns-lazy-img" data-src="./img/slider/slide-09.jpg" data-srcset="./img/slider/slide-09@2x.jpg 2x" src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="525" alt="Слайд 9"></div>    
                 </div>
             </div>    
             <div class="container">    
                 <div class="locations__controls locations__controls--mobile">
-                    <button type="button">
+                    <button type="button" class="prev">
                         <img class="locations__controls-img" src="./img/icons/arrow-left.svg" alt="prew">
                     </button>
-                    <button type="button">
+                    <button type="button" class="next">
                         <img class="locations__controls-img" src="./img/icons/arrow-right.svg" alt="next">
                     </button>
                 </div>
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
                 <div class="services__title">
                     <h2 class="title-section">Сервисы</h2>
@@ -194,7 +223,7 @@
             </div>
         </section>
 
-        <section class="price">
+        <section class="price" id="price">
             <div class="container">
                 <div class="price__title">
                     <h2 class="title-section">Тарифы</h2>
@@ -217,7 +246,7 @@
                                 <li class="card__list-item">Без специальной скидки</li>
                             </ul>
                             <div class="card__button-wrapper">
-                                <button class="button-price">Оставить заявку</button>
+                                <button class="button-price" data-action="modal">Оставить заявку</button>
                             </div>
                         </div>
                     </article>
@@ -238,7 +267,7 @@
                                 <li class="card__list-item">скидка 30% на аренду переговорных</li>
                             </ul>
                             <div class="card__button-wrapper">
-                                <button class="button-price">Оставить заявку</button>
+                                <button class="button-price" data-action="modal">Оставить заявку</button>
                             </div>
                         </div>
                     </article>
@@ -259,7 +288,7 @@
                                 <li class="card__list-item">скидка 30% на аренду переговорных</li>
                             </ul>
                             <div class="card__button-wrapper">
-                                <button class="button-price">Оставить заявку</button>
+                                <button class="button-price" data-action="modal">Оставить заявку</button>
                             </div>
                         </div>
                     </article>
@@ -284,14 +313,14 @@
                                 <img src="./img/icons/wa-icon.svg" alt="whatsapp">
                                 WhatsApp
                             </a>
-                            <button class="button-outline" type="button">Оставить заявку</button>
+                            <button class="button-outline" type="button" data-action="modal">Оставить заявку</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="map">
+        <section class="map" id="map">
             <div class="container">
                 <div class="map__title">
                     <h2 class="title-section">Расположение</h2>
@@ -299,7 +328,7 @@
                 <div class="map__desc">
                     <p>Пресненская набережная, дом 12, 20 этаж.</p>
                 </div>
-                <img src="./img/map/map.jpg" srcset="./img/map/map@2x.jpg 2x" alt="карта" class="map__img">
+                <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A163c3c2ae6d586afbe454bb9a11296a6bc1fa69517de25235835a2064b0c6dd4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
             </div>
         </section>
 
@@ -320,39 +349,51 @@
 
                             </h3>
                             <div class="topic__content">
-                                <p>
-                                    Чтобы <a href="#!">добраться</a> в наш коворкинг, используйте общественный транспорт, такой как метро или автобус. Наш офис расположен в непосредственной близости от станции метро, выходите на выходе, указанном в нашем адресе. Пешеходный подход к офису обеспечен для вашего удобства.
-                                </p>
+                                <div class="topic__content-padding">
+                                    <p>
+                                        Для заказа пропуска в наш коворкинг вы можете воспользоваться удобной онлайн формой на нашем сайте. Просто заполните необходимую информацию, включая ваше имя, контактные данные и предпочтительный срок пользования коворкингом. Наша команда оперативно обработает ваш запрос и свяжется с вами для уточнения деталей и подтверждения бронирования.
+                                    </p>
+                                    <p>
+                                        Если у вас возникли вопросы или вам нужна дополнительная помощь при заказе пропуска, не стесняйтесь обращаться к нашему отделу клиентского обслуживания. Мы готовы ответить на все ваши запросы и предоставить подробную информацию о наших услугах. Вы также можете связаться с нами по телефону или отправить электронное письмо, и наш специалист с удовольствием поможет вам сделать заказ и подобрать оптимальное решение для ваших потребностей.
+                                    </p>
+                                </div>
                             </div>
                         </section>
                         <section class="topic">
                             <h3 class="topic__header">
                                 
                                 <button class="topic__button" type="button">
-                                    <span class="topic__title">Как заказать пропуск</span>
-                                    <img class="topic__icon" src="./img/icons/btn-minus.svg" alt="кнопка открытия / закрытия">
-                                </button>
-
-                            </h3>
-                            <div class="topic__content topic__content--open">
-                                <p>
-                                    Чтобы <a href="#!">добраться</a> в наш коворкинг, используйте общественный транспорт, такой как метро или автобус. Наш офис расположен в непосредственной близости от станции метро, выходите на выходе, указанном в нашем адресе. Пешеходный подход к офису обеспечен для вашего удобства.
-                                </p>
-                            </div>
-                        </section>
-                        <section class="topic">
-                            <h3 class="topic__header">
-                                
-                                <button class="topic__button" type="button">
-                                    <span class="topic__title">Как заказать пропуск</span>
+                                    <span class="topic__title">Как добраться</span>
                                     <img class="topic__icon" src="./img/icons/btn-plus.svg" alt="кнопка открытия / закрытия">
                                 </button>
 
                             </h3>
                             <div class="topic__content">
-                                <p>
-                                    Чтобы <a href="#!">добраться</a> в наш коворкинг, используйте общественный транспорт, такой как метро или автобус. Наш офис расположен в непосредственной близости от станции метро, выходите на выходе, указанном в нашем адресе. Пешеходный подход к офису обеспечен для вашего удобства.
-                                </p>
+                                <div class="topic__content-padding">
+                                    <p>
+                                        Чтобы <a href="#!">добраться</a> в наш коворкинг, используйте общественный транспорт, такой как метро или автобус. Наш офис расположен в непосредственной близости от станции метро, выходите на выходе, указанном в нашем адресе. Пешеходный подход к офису обеспечен для вашего удобства.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="topic">
+                            <h3 class="topic__header">
+                                
+                                <button class="topic__button" type="button">
+                                    <span class="topic__title">Где припарковаться</span>
+                                    <img class="topic__icon" src="./img/icons/btn-plus.svg" alt="кнопка открытия / закрытия">
+                                </button>
+
+                            </h3>
+                            <div class="topic__content">
+                                <div class="topic__content-padding">
+                                    <p>
+                                        Наш коворкинг предоставляет широкий выбор вариантов парковки для удобства наших клиентов. Прямо возле здания нашего офиса расположены выделенные парковочные места, где вы можете оставить свой автомобиль в течение всего вашего визита. Эти места обеспечивают удобный доступ к нашему зданию, сокращая время и усилия, затрачиваемые на поиск парковочного места.
+                                    </p>
+                                    <p>
+                                        В нескольких минутах ходьбы от нашего коворкинга есть несколько общественных парковочных зон, где вы можете оставить свой автомобиль, если парковочные места прямо у нашего здания заняты.
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -369,16 +410,16 @@
                 <div class="footer__nav">
                     <ul class="nav-footer">
                         <li class="nav-footer__item">
-                            <a href="#!" class="nav-footer__link">Локация</a>
+                            <a href="#map" class="nav-footer__link">Локация</a>
                         </li>
                         <li class="nav-footer__item">
-                            <a href="#!" class="nav-footer__link">Сервис</a>
+                            <a href="#services" class="nav-footer__link">Сервис</a>
                         </li>
                         <li class="nav-footer__item">
-                            <a href="#!" class="nav-footer__link">Тарифы</a>
+                            <a href="#price" class="nav-footer__link">Тарифы</a>
                         </li>
                         <li class="nav-footer__item">
-                            <a href="#!" class="nav-footer__link">Расположение</a>
+                            <a href="#location" class="nav-footer__link">Расположение</a>
                         </li>
                     </ul>
                 </div>
@@ -409,5 +450,45 @@
             </div>
         </div>
     </footer>
+
+    <section class="modal">
+        <div class="modal__body">
+            <button class="modal__close" type="button" id="closeModal">
+                <img src="./img/icons/modal-close.svg" alt="Закрыть">
+            </button>
+            <div class="modal__header">
+                <h2 class="modal__title">Заказать звонок</h2>
+                <p>Перезвоним в течении 15 минут</p>
+            </div>
+            <form class="modal__inputs">
+                
+                <input class="input" type="text" placeholder="Имя">
+                <input class="input" type="text" placeholder="Телефон">
+                
+                <label class="modal__checkbox-label" >
+                    <input type="checkbox" class="real-checkbox visually-hidden">
+                    <span class="fake-checkbox"></span>
+                    Согласен на обработку персональных данных 
+                </label>
+
+                <button type="button" class="button-dark button-dark--wide">Оставить заявку</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <a href="#top" class="top-link" id="scrollToTopBtn">
+        <img src="./img/icons/arrow-up.svg" alt="Скролл наверх">
+    </a>
+
+    <!-- Vendor -->
+    <script src="./js/tiny-slider/tiny-slider.js"></script>
+   
+    <!-- Scripts -->
+    <script src="./js/scrollToTop.js"></script>
+    <script src="./js/mobileNav.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

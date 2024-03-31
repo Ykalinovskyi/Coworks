@@ -8,11 +8,16 @@
     font-size: 16px;
     color: #ffffff;
     font-weight: 700;
+    text-align: center;
 
     transition:  background-color 0.3s ease-in;
     
     &:hover {
         background-color: #333333;
+    }
+
+    &--wide {
+        width: 100%;
     }
 }
 

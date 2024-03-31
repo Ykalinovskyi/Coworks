@@ -1,4 +1,6 @@
-.benefits {}
+.benefits {
+    @include scrollTopMargin;
+}
 
 .benefits__row {
     display: flex;
