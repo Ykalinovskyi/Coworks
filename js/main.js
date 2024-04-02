@@ -1,18 +1,21 @@
 /* tiny slider */
 const slider = tns({
-    container: '.slider',
+    autoWidth: true,
+    
     items: 2.7,
     gutter: 10,
     mouseDrag: true,
+    lazyload: true,
+    container: '.slider',
+    swipeAngle: false,
     speed: 400,
-    loop: false,
-    autoWidth: true,
-    autoHeight: true,
+    // loop: false,
+    
     controlsContainer: '.locations__controls',
     nav: false,
 
-    lazyload: true
 }); 
+
 
 // Rкнопки управления слайдером на мобильном устройстве
 
